@@ -4,7 +4,7 @@ const form = document.querySelector('.feedback-form');
 
 const STORAGE_KEY = 'feedback-form-state';
 
-let formData = {};
+const formData = {};
 
 // застосовуємо throttle
 form.addEventListener('input', throttle(onFormInput, 500));
@@ -45,7 +45,7 @@ function formOutput() {
   } else {
     formData[form[0].name] = ' ';
   }
-  
+
   if (form[1].value) {
     formData[form[1].name] = form[1].value;
   } else {
